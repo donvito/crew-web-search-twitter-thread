@@ -1,0 +1,20 @@
+[project]
+name = "web_search_to_twitter_thread"
+version = "0.1.0"
+description = "web_search_to_twitter_thread using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.80.0,<1.0.0"
+]
+
+[project.scripts]
+web_search_to_twitter_thread = "web_search_to_twitter_thread.main:run"
+run_crew = "web_search_to_twitter_thread.main:run"
+train = "web_search_to_twitter_thread.main:train"
+replay = "web_search_to_twitter_thread.main:replay"
+test = "web_search_to_twitter_thread.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

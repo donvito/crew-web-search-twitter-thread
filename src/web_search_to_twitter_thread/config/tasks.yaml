@@ -1,0 +1,20 @@
+---
+scrape_information_task:
+  description: Scrape relevant websites to gather information on the topic '{topic}'.
+    Focus on key insights, statistics, and notable quotes that can enhance the Twitter
+    thread. Ensure thoroughness while being efficient in the scraping process.
+  expected_output: A collection of relevant information and insights about '{topic}',
+    including key statistics, notable quotes, and insights from multiple sources.
+  async_execution: false
+  agent: content_gathering_specialist
+create_twitter_thread_task:
+  description: Using the information gathered about '{topic}', create a structured
+    Twitter thread. Each tweet should convey a key insight or piece of information
+    in a concise manner, ensuring it is engaging and suitable for Twitter's format.
+  expected_output: A complete Twitter thread consisting of multiple tweets summarizing
+    the key insights and information about '{topic}'. Each tweet should be crafted
+    to maximize engagement.
+  async_execution: false
+  agent: thread_formatter
+  context:
+  - scrape_information_task
